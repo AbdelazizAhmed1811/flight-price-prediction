@@ -67,6 +67,11 @@ class Log1pTransformer(BaseEstimator, TransformerMixin):
 
 
 df = pd.read_csv("Clean_Dataset.csv")
+
+import __main__
+__main__.FeatureDropper = FeatureDropper
+__main__.FlightOrdinalEncoder = FlightOrdinalEncoder
+__main__.Log1pTransformer = Log1pTransformer
 model = joblib.load("flight_price_model.pkl")
 
 AIRLINES      = sorted(df["airline"].unique())
